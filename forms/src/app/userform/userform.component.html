@@ -1,0 +1,93 @@
+<div class="jumbotron container">
+  <h3 class="display-4">
+    <span><i class="fa fa-user-plus" aria-hidden="true"></i>User Registration Form</span>
+  </h3>
+  <form class="form-group" [formGroup]="restrationForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="col-md-5 mb-3">
+        <label class="label label-default">First name</label>
+        <input type="text" class="form-control" placeholder="First Name" formControlName="firstName"/>
+      </div>
+      <div class="col-md-5 mb-3">
+          <label for="validationServer01">Last name</label>
+          <input type="text" class="form-control" placeholder="Last Name" formControlName="lastName"/>
+      </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-5 mb-3">
+          <label for="validationServer01">Email</label>
+          <input type="text" class="form-control" placeholder="Email Address" formControlName="email"/>
+        </div>
+        <div class="col-md-5 mb-3">
+            <label for="validationServer01">Country</label>
+            <select class="custom-select" required  formControlName="country">
+                <option value="">Please specify....</option>
+                <option value="1">India</option>
+                <option value="2">United State</option>
+                <option value="3">China</option>
+                <option value="3">Ukrain</option>
+                <option value="3">Zimbabwe</option>
+                <option value="3">Srilanka</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-row mb-2">
+      <div class="col-md-3">
+        <label for="validationServer01">Language</label>
+        <fieldset formGroupName="language">
+        <div class="form-row custom-control custom-checkbox">
+            <div>
+                <input type="checkbox" class="form-check-input" id="hindi" formControlName="lHindi" value="Hindi">
+                <label class="form-check-label" for="hindi">Hindi</label>
+            </div>
+            <div>
+                <input type="checkbox" class="form-check-input" id="english" formControlName="lEnglish" value="English">
+                <label class="form-check-label" for="english">English</label>
+            </div>
+            <div>
+                <input type="checkbox" class="form-check-input" id="marathi" formControlName="lMarathi" value="Marathi">
+                <label class="form-check-label" for="marathi">Marathi</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="col-md-3">
+        <label for="validationServer01">Gender</label>        
+        <div class="form-row custom-control custom-radio">
+            <div class="form-radio">
+                <input type="radio" name="gender" class="form-check-input" id="male" formControlName="gender" value="Male">
+                <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-radio">
+                <input type="radio" name="gender" class="form-check-input" id="female" formControlName="gender" value="Female">
+                <label class="form-check-label" for="female">Female</label>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationServer01">Region</label>
+        <select class="custom-select" multiple>
+          <option value="APAC">APAC</option>
+          <option value="EMEA">EMEA</option>
+          <option value="NORAM">NORAM</option>
+          <option value="LATAM">LATAM</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row mb-4">
+        <div class="col-md-10">
+          <label for="comment">Comment</label>
+          <textarea name="comment" id="comment" class="form-control" rows="5" formControlName="comment"></textarea>
+        </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-5">
+        
+      </div>
+      <div class="col-md-5">
+          <button type="submit" class="btn btn-primary" style="float:left;"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Register</button>        
+          <button type="reset" class="btn btn-primary" style="float: right;"><i class="fa fa-refresh"></i>&nbsp;Reset</button>
+      </div>
+    </div>
+  </form>    
+  </div>

@@ -1,0 +1,17 @@
+<input type="text" [(ngModel)]="message">{{message}}
+<br/><br/>
+User Details: 
+<button (click)="showDetails()" *ngIf="show">Hide</button>
+<button (click)="showDetails()" *ngIf="!show">Show</button>
+<table *ngIf="show">
+    <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone</th>
+    </thead>
+    <tr *ngFor="let user of users">
+        <td>{{user.First_Name}}</td>
+        <td>{{user.Last_Name}}</td>
+        <td>{{user.Phone}}</td>
+    </tr>
+</table>

@@ -1,0 +1,12 @@
+
+<table *ngIf="users">
+  <tr *ngFor="let user of users.data">
+    <td>{{user.first_name}}</td><td>{{user.last_name}}</td><td><img src='{{user.avatar}}'></td>
+  </tr>
+  <tfoot>
+    <tr>
+      <td colspan="2"><button *ngIf="prev" (click)="previous()"> Privious</button></td>
+      <td colspan="2"><button *ngIf="nxt" (click)="next()">Next ></button></td>
+    </tr>
+  </tfoot>
+</table>
